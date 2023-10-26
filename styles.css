@@ -12,6 +12,7 @@ html, body {
     background-color: yellow;
     display: grid;
     grid-template-columns:  1fr 4fr;
+    grid-template-rows: 1fr 5fr;
 }
 
 /* SIDEBAR */
@@ -78,7 +79,6 @@ html, body {
     margin-right: 10px;
     width: 80px;
     height: 30px;
-    background-color: ;
     border-radius: 15px;
     background-color: rgb(79, 235, 134);
 }
@@ -99,7 +99,6 @@ html, body {
     gap: 20px;
     justify-content: start;
     align-items: center;
-    max-height: 50px;
 }
 
 .top-nav-col-1 {
@@ -141,8 +140,38 @@ html, body {
     align-items: center;
 }
 
+/* CONTENT CONTAINER */
+
+.card {
+    width: 260px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    border-left: 7px solid orange;
+    padding: 5px;
+}
+
+
 .content-container {
     background: #e2e8f0 ;
     grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
+.left-content-container {
+    display: grid;
+    grid-template-rows: 100px 5fr;
+    padding: 20px;
+}
+
+.left-content-container .title-container {
+    grid-row: 1;
+}
+
+.left-content-container .card-container {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
