@@ -140,7 +140,16 @@ html, body {
     align-items: center;
 }
 
-/* CONTENT CONTAINER */
+/* CONTENT CONTAINER MAIN */
+
+.content-container {
+    background: #e2e8f0 ;
+    grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+/* CONTENT CONTAINER LEFT */
 
 .card {
     width: 260px;
@@ -150,15 +159,6 @@ html, body {
     border-left: 7px solid orange;
     padding: 5px;
 }
-
-
-.content-container {
-    background: #e2e8f0 ;
-    grid-area: 2 / 2 / 3 / 3;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-}
-
 .left-content-container {
     display: grid;
     grid-template-rows: 100px 5fr;
@@ -175,3 +175,42 @@ html, body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
+
+/* CONTENT CONTAINER RIGHT */
+
+.right-content-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+}
+
+.announcements {
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: 100px 5fr;
+}
+
+.announce-box {
+    background-color: white;
+    padding: 5px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+}
+
+.announce-box div {
+    text-align: center;
+}
+
+.trending {
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 100px 5fr;
+}
+
+.trend-box {
+    background-color: white;
+    padding: 5px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+}
+
